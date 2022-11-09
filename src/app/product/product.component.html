@@ -1,0 +1,10 @@
+<div class="card">
+  <img [src]="productObject.image" alt="Telefon" width="170" height="267" />
+  <h1>{{ productObject.title }}</h1>
+  <p class="price">{{ productObject.price }}</p>
+  <p>{{ productObject.description }}</p>
+  <p>
+    <span>Na stanju:{{ productObject.supplies }}</span>
+    <button (click)="onAddToCart()">Dodaj u korpu</button>
+  </p>
+</div>

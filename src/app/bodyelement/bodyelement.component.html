@@ -1,0 +1,12 @@
+<div>
+  <h1 class="display-3 text-center">Proizvodi</h1>
+</div>
+
+<div class="products">
+  <app-product
+    *ngFor="let p of products"
+    class="product"
+    [productObject]="p"
+    (productCreated)="addNewItem($event)"
+  ></app-product>
+</div>
