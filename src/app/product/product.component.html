@@ -6,5 +6,6 @@
   <p>
     <span>Na stanju:{{ productObject.supplies }}</span>
     <button (click)="onAddToCart()">Dodaj u korpu</button>
+    <button (click)="onAddToCart()" *ngIf="isCartPage">Izbrisi iz korpe</button>
   </p>
 </div>

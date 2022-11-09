@@ -5,7 +5,6 @@ import { CartService } from '../services/cart.service';
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss'],
-  providers: [CartService],
 })
 @Injectable()
 export class CartComponent implements OnInit {
@@ -15,9 +14,5 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartList = this.cartService.cartList;
-    console.log(this.cartList);
   }
-
-
-
 }

@@ -44,7 +44,7 @@ export class BodyelementComponent implements OnInit {
   ];
 
   addNewItem(value: Product) {
-    this.cartService.sendProduct(value);
     console.log(value);
+    this.cartService.sendProduct(value);
   }
 }

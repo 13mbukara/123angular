@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   serverId: number = 111;
 
   constructor(private cartService: CartService) {
-    this.serverId = cartService.cartList.length;
+    cartService.listLength.subscribe((length) => (this.serverId = length));
   }
 
   ngOnInit(): void {}
