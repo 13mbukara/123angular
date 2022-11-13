@@ -1,7 +1,7 @@
-<p>cart works!</p>
+<p *ngIf="isVisible">Korpa je prazna!</p>
 
 <app-product
   *ngFor="let x of cartList"
   class="product"
-  [productObject]="x"
+  [product]="x"
 ></app-product>

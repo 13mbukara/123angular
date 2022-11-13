@@ -1,11 +1,12 @@
-<div class="card">
-  <img [src]="productObject.image" alt="Telefon" width="170" height="267" />
-  <h1>{{ productObject.title }}</h1>
-  <p class="price">{{ productObject.price }}</p>
-  <p>{{ productObject.description }}</p>
-  <p>
-    <span>Na stanju:{{ productObject.supplies }}</span>
-    <button (click)="onAddToCart()">Dodaj u korpu</button>
-    <button (click)="onAddToCart()" *ngIf="isCartPage">Izbrisi iz korpe</button>
-  </p>
-</div>
+<!-- <div [ngClass]="{card: isCartPage===true}"> -->
+  <div class="card">
+    <img [src]="product.image" alt="Telefon" width="90%" height="90%" class="image"/>
+    <h1>{{ product.title }}</h1>
+    <p class="price">{{ product.price }}</p>
+    <p class="description">{{ product.description }}</p>
+    <p>
+      <span>Na stanju:{{ product.supplies }}</span>
+      <button (click)="onAddToCart()">Dodaj u korpu</button>
+      <button (click)="onRemoveFromCart()" *ngIf="isCartPage">Izbrisi iz korpe</button>
+    </p>
+  </div>
