@@ -7,10 +7,10 @@ import { CartService } from '../services/cart.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  serverId: number = 111;
+  cartItems: number = 111;
 
   constructor(private cartService: CartService) {
-    cartService.listLength.subscribe((length) => (this.serverId = length));
+    cartService.listLength.subscribe((length) => (this.cartItems = length));
   }
 
   ngOnInit(): void {}

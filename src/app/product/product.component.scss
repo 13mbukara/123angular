@@ -1,5 +1,10 @@
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .card {
-  max-width: 300px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -8,7 +13,12 @@
   box-shadow: 10px 10px 20px #9c9c9c, -10px -10px 20px #ffffff;
 }
 
+.flexbox > * {
+  width: 30%;
+}
+
 .image {
+  max-width: 300px;
   padding-top: 3%;
   position: relative;
   padding-left: 10%;
@@ -16,7 +26,7 @@
 }
 
 .description {
-  text-align:start;
+  text-align: start;
   padding-left: 5%;
   padding-right: 5%;
 }

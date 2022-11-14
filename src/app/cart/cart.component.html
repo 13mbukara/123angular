@@ -1,7 +1,11 @@
-<p *ngIf="isVisible">Korpa je prazna!</p>
+<p *ngIf="isEmpty; else products">Korpa je prazna!</p>
 
-<app-product
-  *ngFor="let x of cartList"
-  class="product"
-  [product]="x"
-></app-product>
+<ng-template #products>
+  <app-product
+    *ngFor="let cartItem of cartList"
+    class="product"
+    [product]="cartItem"
+    (productCreated)="addNewItem($event)"
+    (productReduced)="reduceNumberOfItems($event)"
+  ></app-product>
+</ng-template>

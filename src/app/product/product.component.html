@@ -1,12 +1,24 @@
-<!-- <div [ngClass]="{card: isCartPage===true}"> -->
-  <div class="card">
-    <img [src]="product.image" alt="Telefon" width="90%" height="90%" class="image"/>
-    <h1>{{ product.title }}</h1>
+<div class="card" [ngClass]="{ flexbox: isCartPage }">
+  <div>
+    <img
+      [src]="product.image"
+      alt="Telefon"
+      width="90%"
+      height="90%"
+      class="image"
+    />
+  </div>
+  <div>
+    <h1>{{ product.title | uppercase }}</h1>
     <p class="price">{{ product.price }}</p>
     <p class="description">{{ product.description }}</p>
-    <p>
-      <span>Na stanju:{{ product.supplies }}</span>
-      <button (click)="onAddToCart()">Dodaj u korpu</button>
-      <button (click)="onRemoveFromCart()" *ngIf="isCartPage">Izbrisi iz korpe</button>
-    </p>
+    <span *ngIf="!isCartPage">Na stanju:{{ product.supplies }}</span>
+    <span *ngIf="isCartPage">U korpi:{{ product.inCart }}</span>
   </div>
+  <p>
+    <button (click)="onAddToCart()" #addButton>Dodaj u korpu</button>
+    <button (click)="onRemoveFromCart()" *ngIf="isCartPage">
+      Izbrisi iz korpe
+    </button>
+  </p>
+</div>
