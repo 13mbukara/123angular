@@ -1,4 +1,4 @@
-<p *ngIf="isEmpty; else products">Korpa je prazna!</p>
+<h1 *ngIf="isEmpty; else products" class="text-center">Korpa je prazna!</h1>
 
 <ng-template #products>
   <app-product
