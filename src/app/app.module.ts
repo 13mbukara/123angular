@@ -8,6 +8,7 @@ import { ProductComponent } from './product/product.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
 import { MatIconModule } from '@angular/material/icon';
+import { RedElDirective } from './directives/red-el.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
     homeComponent,
     ProductComponent,
     CartComponent,
+    RedElDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule, MatIconModule],
   providers: [],
