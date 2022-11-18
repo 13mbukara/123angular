@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { homeComponent } from './home/home.component';
+import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HeaderComponent,
-    homeComponent,
+    HomeComponent,
     ProductComponent,
     CartComponent,
     RedElDirective,

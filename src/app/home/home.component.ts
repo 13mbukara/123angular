@@ -8,7 +8,7 @@ import { Product } from './product';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class homeComponent implements OnInit {
+export class HomeComponent implements OnInit {
   products: Product[];
   heading = 'Mobilni telefoni';
   search = '';
