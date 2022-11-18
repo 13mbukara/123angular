@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
 import { MatIconModule } from '@angular/material/icon';
 import { RedElDirective } from './directives/red-el.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,13 @@ import { RedElDirective } from './directives/red-el.directive';
     CartComponent,
     RedElDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, MatIconModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    MatIconModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

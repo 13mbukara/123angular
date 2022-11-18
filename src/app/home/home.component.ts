@@ -11,7 +11,7 @@ import { Product } from './product';
 export class homeComponent implements OnInit {
   products: Product[];
   heading = 'Mobilni telefoni';
-
+  search = '';
   constructor(
     private cartService: CartService,
     private productService: ProductService

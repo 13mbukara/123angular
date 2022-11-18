@@ -2,6 +2,12 @@
   <h1 class="display-2 text-center">{{ heading }}</h1>
 </div>
 
+<div>
+  <p>Pretraži telefon:</p>
+  <input type="text" [(ngModel)]="search" />
+  <p>Pretražuje se: {{ search }}</p>
+</div>
+
 <div class="products">
   <app-product
     *ngFor="let p of products"
