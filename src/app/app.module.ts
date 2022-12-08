@@ -9,7 +9,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
 import { MatIconModule } from '@angular/material/icon';
 import { RedElDirective } from './directives/red-el.directive';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddProductComponent } from './add-product/add-product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     CartComponent,
     RedElDirective,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +30,9 @@ import { FormsModule } from '@angular/forms';
     RouterModule,
     MatIconModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

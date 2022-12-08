@@ -1,0 +1,11 @@
+{{ addProductForm.value | json }}
+
+<form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input matInput formControlName="title" />
+  </mat-form-field>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" type="submit">Posalji</button>
+  </div>
+</form>
