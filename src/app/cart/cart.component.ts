@@ -6,7 +6,10 @@ import { CartService } from '../services/cart.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss'],
 })
-@Injectable()
+
+// ovo treba deo po deo
+
+@Injectable() 
 export class CartComponent implements OnInit {
   cartList: Product[] = [];
   isEmpty = true;

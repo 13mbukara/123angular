@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 import { Product } from '../home/product';
 import { CartService } from '../services/cart.service';
 
+// ovo treba postepeno da se ubacuje
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -18,10 +20,10 @@ import { CartService } from '../services/cart.service';
 })
 export class ProductComponent implements OnInit {
   numberOfElements: number = 0;
-  cartList: Product[] = [];
+  //cartList: Product[] = [];
   isCartPage: boolean = false;
 
-  @ViewChild('addButton') addButton: any;
+ // @ViewChild('addButton') addButton: any;
   @Input() product: Product;
 
   @Output() productCreated = new EventEmitter<Product>();
@@ -37,14 +39,16 @@ export class ProductComponent implements OnInit {
     if (this.product.supplies > 0) {
       this.product.supplies--;
       this.productCreated.emit(this.product);
-    } else this.addButton.nativeElement.disabled = true;
+    } //else this.addButton.nativeElement.disabled = true;
   }
 
   onRemoveFromCart() {
     if (this.product.supplies >= 0) {
       this.product.supplies++;
       this.productReduced.emit(this.product);
-      this.addButton.nativeElement.disabled = false;
+      //this.addButton.nativeElement.disabled = false;
     }
   }
+
+  buttonClick=true;
 }

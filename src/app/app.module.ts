@@ -9,7 +9,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
 import { MatIconModule } from '@angular/material/icon';
 import { RedElDirective } from './directives/red-el.directive';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //4
+import { FilterPipe } from './filter.pipe';
+import { FormaComponent } from './forma/forma.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,16 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     CartComponent,
     RedElDirective,
+    FilterPipe,
+    FormaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     MatIconModule,
-    FormsModule,
+    FormsModule, //3
+    ReactiveFormsModule, //3
   ],
   providers: [],
   bootstrap: [AppComponent],

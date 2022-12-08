@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Product } from '../home/product';
 
+// ovo ima, vrv bi trebalo postepeno da ide
+
 @Injectable({ providedIn: 'root' })
 export class CartService {
   cartList: Product[] = [];

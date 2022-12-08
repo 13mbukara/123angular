@@ -1,4 +1,8 @@
-<div class="card" [ngClass]="{ flexbox: isCartPage }">
+<div
+  class="card"
+  [ngClass]="{ flexbox: isCartPage }"
+  [ngStyle]="{ border: '1px solid red' }"
+>
   <div>
     <img
       [src]="product.image"
@@ -8,6 +12,9 @@
       class="image"
     />
   </div>
+
+  <!-- ovo novo treba da se dodaje!!! -->
+
   <div>
     <h1>{{ product.title | uppercase }}</h1>
     <p class="price" appRedEl>{{ product.price }}</p>
@@ -16,7 +23,13 @@
     <span *ngIf="isCartPage">U korpi:{{ product.inCart }}</span>
   </div>
   <p>
-    <button (click)="onAddToCart()" #addButton>Dodaj u korpu</button>
+    <button
+      [ngClass]="{ classButtonClick: buttonClick === true }"
+      (click)="onAddToCart()"
+      #addButton
+    >
+      Dodaj u korpu
+    </button>
     <button (click)="onRemoveFromCart()" *ngIf="isCartPage">
       Izbrisi iz korpe
     </button>

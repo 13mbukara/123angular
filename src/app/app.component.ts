@@ -1,17 +1,13 @@
-import { Component } from '@angular/core';
-import { Product } from './home/product';
+import { Component } from '@angular/core'; 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = '123angular';
-  product: Product;
 
-  addNewItem(value: any) {
-    this.product = value;
-    console.log(value);
-  }
+export class AppComponent  {
+  title = 'app-prodavnica';
+
+  
 }

@@ -1,5 +1,9 @@
+<!-- ovo ima -->
 <h1 *ngIf="isEmpty; else products" class="text-center">Korpa je prazna!</h1>
 
+<app-forma></app-forma>
+
+<!-- ovo ima -->
 <ng-template #products>
   <app-product
     *ngFor="let cartItem of cartList"
@@ -9,3 +13,4 @@
     (productReduced)="reduceNumberOfItems($event)"
   ></app-product>
 </ng-template>
+

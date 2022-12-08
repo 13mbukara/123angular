@@ -1,3 +1,5 @@
+// ovo ima
+
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { ProductService } from '../services/products.service';

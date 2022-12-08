@@ -6,3 +6,5 @@ export interface Product {
   supplies: number;
   inCart: number;
 }
+
+//ovo ima

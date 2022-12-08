@@ -2,10 +2,23 @@
   <h1 class="display-2 text-center">{{ heading }}</h1>
 </div>
 
+
+
+<!-- ovo ima -->
 <div>
   <p>Pretraži telefon:</p>
   <input type="text" [(ngModel)]="search" />
   <p>Pretražuje se: {{ search }}</p>
+</div>
+
+<!-- ima 2 verzije, obe ovo ima -->
+<div class="products">
+  <app-product
+    *ngFor="let p of products | filter : search : 'title'"
+    class="product"
+    [product]="p"
+    (productCreated)="addNewItem($event)"
+  ></app-product>
 </div>
 
 <div class="products">
@@ -16,3 +29,4 @@
     (productCreated)="addNewItem($event)"
   ></app-product>
 </div>
+
