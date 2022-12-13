@@ -22,7 +22,7 @@ export class AddProductComponent implements OnInit {
   }
 
   onSubmit() {
-    alert('aleksa');
+    alert('Submitted');
     console.log(this.addProductForm.value);
   }
 }

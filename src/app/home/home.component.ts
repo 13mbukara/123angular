@@ -4,6 +4,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { ProductService } from '../services/products.service';
 import { Product } from './product';
+import { FilterPipe } from '../filter.pipe';
 
 @Component({
   selector: 'app-home',

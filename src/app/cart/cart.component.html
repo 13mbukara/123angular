@@ -1,7 +1,7 @@
 <!-- ovo ima -->
 <h1 *ngIf="isEmpty; else products" class="text-center">Korpa je prazna!</h1>
 
-<app-forma></app-forma>
+<!-- <app-forma></app-forma> -->
 
 <!-- ovo ima -->
 <ng-template #products>
@@ -14,3 +14,4 @@
   ></app-product>
 </ng-template>
 
+<app-add-product></app-add-product>

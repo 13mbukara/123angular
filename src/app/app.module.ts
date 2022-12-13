@@ -14,7 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddProductComponent } from './add-product/add-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { MaterialModule } from './material/material.module';
     CartComponent,
     RedElDirective,
 
+    FilterPipe,
     AddProductComponent,
   ],
   imports: [
@@ -32,7 +33,6 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     RouterModule,
     MatIconModule,
-
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
